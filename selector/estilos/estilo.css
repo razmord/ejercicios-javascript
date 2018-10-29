@@ -46,5 +46,34 @@ div.botones{
 }
 div.botones>button{
   width:3cm;
-  margin:3px 2.5cm 3px 2.5cm;
+  margin:3px 2.2cm 3px 2.2cm;
+}
+
+button.pulsado{
+  background: plum;
+}
+
+div.container{
+  background: white;
+  width: 18cm;
+  height: 12cm;
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 0.5cm;
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+}
+
+div.container>div{
+  background: white;
+  width: 7cm;
+  height: 10cm;
+  display: block;
+  margin: 20px;
+  margin-bottom: 0.5cm;
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+}
+div#derecha{
+  float:right;
 }
