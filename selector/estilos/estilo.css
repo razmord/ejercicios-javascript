@@ -1,0 +1,50 @@
+body {
+    background: rgb(204,204,204); 
+  }
+div.selector {
+    background: white;
+    width: 21cm;
+    height: 21cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+
+header{
+    border-bottom: 4px solid rebeccapurple;
+}
+header>h1{
+  padding:20px;
+  padding-bottom: 0px;
+}
+
+div.menu{
+  background: white;
+  width: 18cm;
+  height: 3cm;
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 0.5cm;
+  padding:10px;
+  border: 2px solid rebeccapurple;
+}
+div.filaf{
+  float:right;
+  width: 8cm;
+}
+
+div.filaf>div{
+  float: right;
+  margin-right: 1cm;
+  margin-bottom: 1cm;
+}
+div.botones{
+  width:8cm;
+  border:2px rebeccapurple solid;
+  padding-left:0.5cm;
+}
+div.botones>button{
+  width:3cm;
+  margin:3px 2.5cm 3px 2.5cm;
+}
