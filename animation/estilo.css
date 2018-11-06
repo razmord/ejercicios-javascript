@@ -1,0 +1,54 @@
+div.pantalla{
+    background-image: url(imagenes/bg-106.png);
+    width: 240px;
+    height: 160px;
+    margin: 5px auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+#lute{
+    float:right;
+    width:31px;
+    height:37px;
+    background-image: url(imagenes/lute_mage_magic.gif);
+    background-position: -7px -8px;
+    position: relative;
+    top: 90px;
+    right: 30px;
+    animation: spell 1s linear infinite;
+}
+
+@keyframes spell{
+    0% {background-position: -7px -8px; width:31px; height:37px; top: 90px;right:30px}
+    9.99% {background-position: -7px -8px; width:31px; height:37px}
+    10% {background-position: -39px -8px; width:32px; height:37px}
+    19.99% {background-position: -39px -8px; width:32px; height:37px}
+    20% {background-position: -74px -8px; width:34px; height:37px}
+    29.99% {background-position: -74px -8px; width:34px; height:37px;right:30px}
+    30% {background-position: -111px -8px; width:31px; height:37px; right:29px}
+    39.99% {background-position: -111px -8px; width:31px; height:37px; right:29px}
+    40% {background-position: -144px -8px; width:35px; height:39px; right:28px}
+    49.99%  {background-position: -144px -8px; width:35px; height:39px; right:28px; top: 90px} 
+    50% {background-position: -175px -4px; width:31px; height:41px;right:29px; top: 86px} 
+    59.99%  {background-position: -175px -4px; width:31px; height:41px;right:29px; top: 86px} 
+    60% {background-position: -207px -4px; width:39px; height:41px; top: 84px;right:18px} 
+    69.99%  {background-position: -207px -4px; width:39px; height:41px; top: 84px;right:18px} 
+    70% {background-position: -245px -8px; width:31px; height:37px; top: 90px;right:30px} 
+   79.99%  {background-position: -245px -8px; width:31px; height:37px; top: 90px;right:30px} 
+    80% {background-position: -284px -8px; width:31px; height:37px; top: 90px;right:30px} 
+    99.99%  {background-position: -284px -8px; width:31px; height:37px; top: 90px;right:30px} 
+    100% {background-position: -284px -8px; width:31px; height:37px; top: 90px;right:30px}  
+}
+
+#lynn{
+    width:27px;
+    height:41px;
+    background-image: url(imagenes/lyn_lord_sword.gif);
+    background-position: -11px -11px;
+    position: relative;
+    top: 86px;
+    left: 30px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

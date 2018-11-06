@@ -3,8 +3,6 @@ body {
   }
 div.selector {
     background: white;
-    width: 21cm;
-    height: 21cm;
     display: block;
     margin: 0 auto;
     margin-bottom: 0.5cm;
@@ -29,20 +27,25 @@ div.menu{
   padding:10px;
   border: 2px solid rebeccapurple;
 }
-div.filaf{
-  float:right;
-  width: 8cm;
-}
-
-div.filaf>div{
-  float: right;
-  margin-right: 1cm;
-  margin-bottom: 1cm;
-}
 div.botones{
   width:8cm;
   border:2px rebeccapurple solid;
   padding-left:0.5cm;
+}
+div.flota{
+  float:right;
+  display:table;
+  width:8cm;
+  border:2px rebeccapurple solid;
+  padding-left:0.5cm;
+}
+div.flota>div{
+  display:inline-block;
+  width:40%;
+  margin: 16px 1px 17px 1px; 
+}
+div.flota>div:nth-child(even){
+  text-align: right;
 }
 div.botones>button{
   width:3cm;
@@ -52,7 +55,12 @@ div.botones>button{
 button.pulsado{
   background: plum;
 }
-
+img{
+  width:100%;
+  height: auto;
+  border: 1px black solid;
+  margin: auto;
+}
 div.container{
   background: white;
   width: 18cm;
