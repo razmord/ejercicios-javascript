@@ -1,2 +1,2 @@
 # ejercicios-javascript
-https://razmord.github.io/ejercicios-javascript/animacion/index.html
+https://razmord.github.io/ejercicios-javascript/animation/index.html
