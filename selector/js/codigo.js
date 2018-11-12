@@ -1,5 +1,5 @@
-var botones=document.querySelectorAll("div.botones > button");
-var radio=document.querySelectorAll("input.r");
+var botones=document.querySelectorAll("div.botones > button"); //Selecciona los button dentro de botones
+var radio=document.querySelectorAll("input.r"); //Selecciona las etiquetas input de clase r
 var texto=document.getElementById("text");
 var aplicar=document.getElementById("apl");
 var derecha=document.getElementById("derecha");
