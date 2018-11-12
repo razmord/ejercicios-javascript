@@ -1,26 +1,31 @@
 body {
-    background: rgb(204,204,204); 
+    background:  rgba(224, 194, 199, 0.63); 
+    font-family: Arial, Helvetica, sans-serif;
   }
-div.selector {
-    background: white;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-  }
-
 header{
     border-bottom: 4px solid rebeccapurple;
 }
 header>h1{
   padding:20px;
   padding-bottom: 0px;
+  color: rebeccapurple;
+}
+
+button{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px dotted rebeccapurple;
+  border-radius: 50%;
+  background-color: plum;
+}
+input{
+  background-color:  rgba(224, 194, 199, 0.63);
+  color: rebeccapurple;
 }
 
 div.menu{
-  background: white;
+  background: rgba(255, 216, 223, 0.644);
   width: 18cm;
-  height: 3cm;
+  height: 4cm;
   display: block;
   margin: 20px auto;
   margin-bottom: 0.5cm;
@@ -53,7 +58,7 @@ div.botones>button{
 }
 
 button.pulsado{
-  background: plum;
+  background: orchid;
 }
 img{
   width:100%;
@@ -62,7 +67,7 @@ img{
   margin: auto;
 }
 div.container{
-  background: white;
+  background:  rgba(255, 216, 223, 0.644);
   width: 18cm;
   height: 12cm;
   display: block;
@@ -73,7 +78,7 @@ div.container{
 }
 
 div.container>div{
-  background: white;
+  background:  rgba(255, 216, 223, 0.644);
   width: 7cm;
   height: 10cm;
   display: block;
@@ -84,4 +89,110 @@ div.container>div{
 }
 div#derecha{
   float:right;
+}
+
+div.pantalla{
+  background-image: url(imagenes/bg-106.png);
+  width: 240px;
+  height: 160px;
+  margin: 5px auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+#lute{
+  float:right;
+  position: relative;
+  background-image: url(imagenes/lute_mage_magic.gif);
+  /* background-position: -332px -13px; width:41px; height:33px; top: 90px;right:12px;*/
+  background-position: -7px -8px;
+  width:31px;
+  height:37px;
+  top: 90px;
+  right:30px;
+  animation: spell 1.9s linear infinite;
+}
+
+@keyframes spell{
+  /*frame 1*/
+  0% {background-position: -7px -8px; width:31px; height:37px; top: 90px;right:30px}
+  4.33% {background-position: -7px -8px; width:31px; height:37px}
+  /*frame 2*/
+  4.34% {background-position: -39px -8px; width:32px; height:37px}
+  8.67% {background-position: -39px -8px; width:32px; height:37px}
+  /*frame 3*/
+  8.68% {background-position: -74px -8px; width:34px; height:37px}
+  13.11% {background-position: -74px -8px; width:34px; height:37px;right:30px}
+  /*frame 4*/
+  13.12% {background-position: -111px -8px; width:31px; height:37px; right:29px}
+  17.45% {background-position: -111px -8px; width:31px; height:37px; right:29px}
+  /*frame 5*/
+  17.46% {background-position: -144px -8px; width:35px; height:39px; right:28px}
+  21.89%  {background-position: -144px -8px; width:35px; height:39px; right:28px; top: 90px} 
+  /*frame 6*/
+  21.90% {background-position: -175px -4px; width:31px; height:41px;right:29px; top: 86px} 
+  26.33%  {background-position: -175px -4px; width:31px; height:41px;right:29px; top: 86px} 
+  /*frame 7*/
+  26.34% {background-position: -207px -4px; width:39px; height:41px; top: 84px;right:18px} 
+  30.67%  {background-position: -207px -4px; width:39px; height:41px; top: 84px;right:18px} 
+  /*frame 8*/
+  30.68% {background-position: -245px -4px; width:45px; height:39px; top: 84px;right:12px} 
+ 35.11%  {background-position: -245px -4px; width:45px; height:39px; top: 84px;right:12px} 
+ /*frame 9*/
+  35.12% {background-position: -285px -4px; width:46px; height:39px; top: 84px;right:12px} 
+  39.45%  {background-position: -285px -4px; width:46px; height:39px; top: 84px;right:12px} 
+  /*frame 10*/
+  39.46% {background-position: -332px -13px; width:41px; height:33px; top: 90px;right:12px} 
+  43.89%  {background-position: -332px -13px; width:41px; height:33px; top: 90px;right:12px}
+  /*frame 11*/
+  43.90% {background-position: -375px -13px; width:43px; height:33px; top: 90px;right:12px} 
+  48.33%  {background-position: -375px -13px; width:43px; height:33px; top: 90px;right:12px} 
+  /*frame 12*/
+  48.34% {background-position: -420px -5px; width:43px; height:42px; top: 81px;right:12px}
+  52.67%  {background-position: -420px -5px; width:43px; height:42px; top: 81px;right:12px}
+  /*frame 13*/
+  52.68% {background-position: -4px -47px; width:43px; height:32px; top: 90px;right:12px}
+  57.11% {background-position: -4px -47px; width:43px; height:32px; top: 90px;right:12px}
+  /*frame 14*/
+  57.12% {background-position: -48px -47px; width:43px; height:32px; top: 90px;right:12px} 
+  61.45%  {background-position: -48px -47px; width:43px; height:32px; top: 90px;right:12px}
+  /*frame 15*/
+  61.46% {background-position: -93px -47px; width:43px; height:32px; top: 90px;right:12px} 
+  65.89%  {background-position: -93px -47px; width:43px; height:32px; top: 90px;right:12px} 
+  /*frame 16*/
+  65.90% {background-position: -138px -48px; width:43px; height:32px; top: 90px;right:12px} 
+  70.33%  {background-position: -138px -48px; width:43px; height:32px; top: 90px;right:12px} 
+  /*frame 17*/
+  70.34% {background-position: -183px -47px; width:43px; height:32px; top: 90px; right:13px} 
+  74.67% {background-position: -183px -47px; width:43px; height:32px; top: 90px;right:13px} 
+  /*frame 18*/
+  74.68% {background-position: -229px -47px; width:41px; height:32px; top: 90px;right:15px} 
+  79.11%  {background-position: -229px -47px; width:41px; height:32px; top: 90px;right:15px}
+  /*frame 19*/
+  79.12% {background-position: -272px -47px; width:39px; height:35px; top: 89px;right:19px} 
+  81.45%  {background-position: -272px -47px; width:39px; height:35px; top: 89px;right:19px} 
+  /*frame 20*/
+  81.46% {background-position: -314px -47px; width:31px; height:35px; top: 89px;right:21px} 
+  85.89%  {background-position: -314px -47px; width:31px; height:35px; top: 89px;right:21px} 
+  /*frame 21*/
+  85.9% {background-position: -348px -47px; width:28px; height:35px; top: 89px;right:24px} 
+  90.33%  {background-position: -348px -47px; width:28px; height:35px; top: 89px;right:24px} 
+  /*frame 22*/
+  90.34% {background-position: -374px -47px; width:28px; height:35px; top: 89px;right:27px} 
+  94.67%  {background-position: -374px -47px; width:28px; height:35px; top: 89px;right:27px}
+  /*frame 23*/
+  94.68% {background-position: -7px -8px; width:31px; height:37px; top: 90px;right:30px}     
+  100% {background-position: -7px -8px; width:31px; height:37px; top: 90px;right:30px}
+}
+
+#lynn{
+  width:27px;
+  height:41px;
+  background-image: url(imagenes/lyn_lord_sword.gif);
+  background-position: -11px -11px;
+  position: relative;
+  top: 86px;
+  left: 30px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
