@@ -9,7 +9,7 @@ var opcionB;
 var creadoD=document.createElement("p");
 var creadoI=document.createElement("p");
 var aux;
-derecha.appendChild(creadoD);
+derecha.appendChild(creadoD); //Da un hijo al div para que removeChild no provoque un error;
 izquierda.appendChild(creadoI);
 aplicar.addEventListener('click', aplica, false);
 for (var i = 0; i < botones.length; i++) {
