@@ -3,11 +3,13 @@ html {
   }
 body{
     margin: 0;
+    height: 100%;
     min-height: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .container{
     min-width: 100%;
+    height: 100%;
     min-height: -moz-available; 
     min-height: -webkit-fill-available;
     min-height: fill-available;
@@ -15,6 +17,7 @@ body{
 }
 .main{
     min-width: 100%;
+    height: 100%;
     min-height: -moz-available; 
     min-height: -webkit-fill-available;
     min-height: fill-available;
@@ -34,8 +37,8 @@ body{
     display:table;
     width:90%;
     position: fixed;
-    top: 45px;
-    left: 50px;
+    top: 5vh;
+    left: 5vw;
 }
 .logo{
     width: 20%;
@@ -43,8 +46,14 @@ body{
     color: aliceblue;
     font-size: 32px;
     font-weight: bold;
+    transition: font-size 0.4s ease-in-out;
 
 }
+
+.logo:hover{
+    font-size: 34px;
+}
+
 .logo> :first-child{
     border-bottom: 3px solid aliceblue;
     padding-bottom: 8px;
@@ -58,13 +67,22 @@ body{
     min-height: -webkit-fill-available;
     min-height: fill-available;
     display:table-cell;
+    text-align: right;
+    position: relative;
 }
 .boton{
+    position: absolute;
+    top:26px;
+    right:0;
     margin:32px;
     color: aliceblue;
     width: 20%;
     display:table;
     font-size: 32px;
+    transition: font-size 0.2s ease-in-out;
+}
+.boton:hover{
+    font-size: 34px;
 }
 .boton> p{
     display:table-cell;
@@ -73,4 +91,42 @@ body{
 .boton> i{
     display:table-cell;
     vertical-align: baseline;
+}
+
+.menuh{
+    display:table;
+    width:90%;
+    position: fixed;
+    bottom: 5vh;
+    left: 5vw;
+    border: 1px slategray outset;
+    background-color: rgba(124, 20, 20, 0.452);
+}
+
+.menuh>div{
+    display:table-cell;
+    width:25%;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 1.2em;
+    vertical-align: baseline;
+    vertical-align: -webkit-baseline-middle;
+    transition: opacity 0.5s ease-in;
+    text-align: center;
+    
+}
+.menuh> :nth-child(2n-1){
+    position: absolute;
+    background-color: rgba(134, 12, 12, 0.705);
+
+}
+.menuh> :nth-child(2n-1):hover{
+    opacity: 0;
+}
+.menuh> :nth-child(2n){
+    color: aliceblue;
+    background-color: rgba(87, 75, 165, 0.788);
+}
+.menuh> :nth-child(2n):hover .menuh> :nth-child(2n){
+    opacity: 0;
 }
