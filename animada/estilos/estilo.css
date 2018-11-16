@@ -15,6 +15,8 @@ body{
     min-height: fill-available;
     overflow: hidden;
 }
+
+/*Main page*/
 .main{
     min-width: 100%;
     height: 100%;
@@ -24,20 +26,16 @@ body{
     background-image: url(imagenes/brandon-mowinkel-693342-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    left:0;
+    position: fixed;
+    transition: left 0.5s ease-in;
 }
-.menu{
-    position:fixed;
-    width:300px;
-    min-height:100%;
-    background-color: slategrey;
-    top:0px;
-    right:-300px;
-}
+/*Barra Superior*/
 .accion{
     display:table;
     width:90%;
     position: fixed;
-    top: 5vh;
+    top: 0.5vh;
     left: 5vw;
 }
 .logo{
@@ -93,40 +91,66 @@ body{
     vertical-align: baseline;
 }
 
+/*Menu Inferior*/
 .menuh{
     display:table;
     width:90%;
-    position: fixed;
+    height: 70px;
+    position: absolute;
     bottom: 5vh;
     left: 5vw;
     border: 1px slategray outset;
     background-color: rgba(124, 20, 20, 0.452);
 }
-
 .menuh>div{
-    display:table-cell;
-    width:25%;
+    display: table-cell;
+    overflow: hidden;
+}
+.celda{
+    position: relative;
+    display:table;
+    width: 100%;
+    height: 70px;
     color: aliceblue;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1.2em;
-    vertical-align: baseline;
-    vertical-align: -webkit-baseline-middle;
-    transition: opacity 0.5s ease-in;
     text-align: center;
-    
+    overflow: hidden;
 }
-.menuh> :nth-child(2n-1){
+.celda>div{
     position: absolute;
-    background-color: rgba(134, 12, 12, 0.705);
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    display:table-cell;
+    transition: bottom 0.5s ease-out 0s, color 0.05s ease-in 0.15s;
+    padding-top:30px;
+}
 
+.velo{
+    background-color: rgba(87, 75, 165);
+    bottom:-100%;
 }
-.menuh> :nth-child(2n-1):hover{
-    opacity: 0;
-}
-.menuh> :nth-child(2n){
+.celda>.texto{
     color: aliceblue;
-    background-color: rgba(87, 75, 165, 0.788);
+    /*z-index: 1;*/
 }
-.menuh> :nth-child(2n):hover .menuh> :nth-child(2n){
-    opacity: 0;
+
+.celda:hover .velo{
+    bottom:0;
+}
+
+.celda>.texto:hover{
+    color:orange;
+}
+
+/*Menu Lateral*/
+.menu{
+    position:fixed;
+    width:400px;
+    min-height:100%;
+    background-color: slategrey;
+    top:0px;
+    right:-400px;
+    transition: right 0.5s ease-in;
 }
