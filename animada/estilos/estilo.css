@@ -128,7 +128,11 @@ body{
 }
 
 .velo{
-    background-color: rgba(87, 75, 165);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7c9ce6+0,203796+100&1+0,0.7+0,1+99,0+100 */
+    background: -moz-linear-gradient(top, rgba(124,156,230,0.7) 0%, rgba(33,56,151,1) 99%, rgba(32,55,150,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(124,156,230,0.7) 0%,rgba(33,56,151,1) 99%,rgba(32,55,150,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(124,156,230,0.7) 0%,rgba(33,56,151,1) 99%,rgba(32,55,150,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b37c9ce6', endColorstr='#00203796',GradientType=0 ); /* IE6-9 */
     bottom:-100%;
 }
 .celda>.texto{
@@ -149,8 +153,64 @@ body{
     position:fixed;
     width:400px;
     min-height:100%;
-    background-color: slategrey;
+    color:aliceblue;
     top:0px;
     right:-400px;
     transition: right 0.5s ease-in;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0c0c0c+0,6c6e70+100 */
+    background: #0c0c0c; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #0c0c0c 0%, #6c6e70 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #0c0c0c 0%,#6c6e70 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #0c0c0c 0%,#6c6e70 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c0c', endColorstr='#6c6e70',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+.velo-principal{
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(61, 61, 61, 0.404);
+}
+
+.menu>div{
+    transform: scaleY(0);
+    transition: transform 0.3s linear;
+}
+
+.menu-header{ 
+    margin-top: 140px;
+    text-align: right;
+    padding-right: 70px;
+    padding:auto;
+    height:45px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.menu-element{
+    padding:10px;
+    text-align: right;
+    padding:auto;
+    padding-right: 70px;
+    height:35px;
+    font-weight: bold;
+    font-size: 22px;
+    transition: font-size 0.2s ease-in-out;
+}
+@keyframes rotacion {
+    0%   {transform: rotate(0deg);}
+    50%  {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+.menu-element>i{
+    visibility: hidden;
+    margin-right: 10px;
+    animation: rotacion 4s linear infinite;
+}
+.menu-element:hover{
+    font-size: 26px;     
+}
+.menu-element:hover i{
+    visibility: visible;
+}
+
