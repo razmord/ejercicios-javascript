@@ -15,18 +15,20 @@ li{
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 28px;
-    color:blue;
-    background-color: yellow;
     font-weight: bold;
     border: 5px black solid;
     vertical-align: -webkit-baseline-middle;
     vertical-align: middle;
 }
-li:first-child{
-    color:green;
-    background-color: magenta;
+li.UNO{
+    background-color:green;
+    color: magenta;
 }
-li:last-child{
-    color:red;
-    background-color: cyan;
+li.DOS{
+    color:yellow;
+    background-color: blue;
+}
+li.TRES{
+    color:cyan;
+    background-color: red;
 }

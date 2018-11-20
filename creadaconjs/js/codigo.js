@@ -10,8 +10,8 @@ for(var i=0; i<elelista.length;i++){
     elelista[i]=document.createElement("li");
     lista.appendChild(elelista[i]);
     switch(i){
-        case 0: elelista[i].innerHTML="UNO"; break;
-        case 1: elelista[i].innerHTML="DOS"; break;
-        case 2: elelista[i].innerHTML="TRES"; break;
+        case 0: elelista[i].innerHTML="UNO"; elelista[i].className="UNO"; break;
+        case 1: elelista[i].innerHTML="DOS"; elelista[i].className="DOS";break;
+        case 2: elelista[i].innerHTML="TRES"; elelista[i].className="TRES";break;
     }
 }
