@@ -10,21 +10,21 @@ boton.addEventListener('click', abreMenu,false);
 
 function abreMenu(){
     if(abierto==false){
+        boton.style.transform= "scaleY(0)"
+        setTimeout(function(){
         menu.style.right="0";
         main.style.left="-300px";
-        texto.innerHTML=null;
-        icono.className=null;
         setTimeout(ponVelo, 500);
+        },200);
         abierto=true;
     }
     else{
         for ( i = 0; i < escalas.length; i++ ) {
             escalas[i].style.transform= "scaleY(0)";
           }
+        boton.style.transform= "scaleY(0)";
         setTimeout(function(){ menu.style.right="-400px";
         main.style.left="0";
-        texto.innerHTML=null;
-        icono.className=null;
         velo.style.display="none";
         setTimeout(aparecerBoton, 500);
         abierto=false;},300);
@@ -38,12 +38,13 @@ function ponVelo(){
     for ( i = 0; i < escalas.length; i++ ) {
         escalas[i].style.transform= "scaleY(1)";
       }
-    
+    boton.style.transform= "scaleY(1)"
 }
 
 function aparecerBoton(){
     texto.innerHTML="Menú";
     icono.className="fas fa-arrow-alt-circle-right";
+    boton.style.transform= "scaleY(1)"
 }
 
 

@@ -76,8 +76,9 @@ body{
     color: aliceblue;
     width: 20%;
     display:table;
+    transform: scaleY(1);
     font-size: 32px;
-    transition: font-size 0.2s ease-in-out;
+    transition: font-size 0.2s ease-in-out, transform 0.3s linear;
 }
 .boton:hover{
     font-size: 34px;
