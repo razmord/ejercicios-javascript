@@ -46,21 +46,21 @@ button{
     border-radius: 30%;
     color:blue;
 }
-#rojo{
-    background-color: red;
+#blanco{
+    background-color: white;
 }
-#verde{
-    background-color: green;
+#negro{
+    background-color: black;
 }
 #naranja{
-    background-color: rgb(255, 195, 30);
+    background-color: rgb(233, 196, 142);
 }
 #purpura{
     background-color: rebeccapurple;
 }
 
 .contenedor{
-    background-color: lightsteelblue;
+    background-color: rgb(233, 196, 142);
     margin-left: auto;
     margin-right: auto;
     margin-top:20px;
@@ -70,10 +70,11 @@ button{
 }
 
 .ficha{
-    color:white;
-    font-size: 2em;
+    color:black;
+    font-size: 1em;
     text-align: center;
     vertical-align: middle;
-    background-color: blue;
+    background-color: rgb(233, 196, 142);
     display: table-cell;
+    border-radius: 50%;
 }
