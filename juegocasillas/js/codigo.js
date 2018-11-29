@@ -54,6 +54,11 @@ window.onload = function(){
             this.innerText="+";
         }
         this.style.backgroundColor=colorc;
+        if(colorc=="white"){
+            negro.click();
+        }else if(colorc=="black"){
+            blanco.click();
+        }
     }
     function seleccionaColor(){
         switch(this.id){
@@ -64,8 +69,8 @@ window.onload = function(){
         }
     }
     function resetColor(){
-        verde.style.boxShadow="";
-        rojo.style.boxShadow="";
+        blanco.style.boxShadow="";
+        negro.style.boxShadow="";
         naranja.style.boxShadow="";
         purpura.style.boxShadow="";
     }
