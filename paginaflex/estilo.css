@@ -1,0 +1,61 @@
+/*Propiedades de la página*/
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color:black;
+    background-color: sandybrown;
+    margin:0; /*Para que los elementos puedan ocupar el 100% de la pagina*/
+}
+/*Header de la página*/
+header{
+    width: 100%;
+    height: 150px;
+    background-image: url(imagenes/il_fullxfull.1701661045_fmlu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    background-color: cornflowerblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+nav>div{
+    width:140px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+nav>div:nth-child(1){
+    background-color: rgb(195, 216, 255);
+}
+nav>div:nth-child(2){
+    background-color: rgb(63, 117, 218);
+}
+nav>div:nth-child(3){
+    background-color: rgb(146, 169, 211);
+}
+nav>div:nth-child(4){
+    background-color: rgb(55, 123, 248);
+}
+nav>div:nth-child(5){
+    background-color: rgb(162, 195, 255);
+}
+main{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+article{
+    margin:0.5em;
+    background-color: white;
+    box-shadow: 4px 4px 2px grey;
+    padding: 7px;
+    flex-grow: 1;
+}
+article.img{
+    flex-grow: 2;
+}

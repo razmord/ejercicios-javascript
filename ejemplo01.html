@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <script src=""></script>
+    <script>
+        window.onload = function() {
+            const entrada1 = document.querySelector("#entrada1");
+            const entrada2 = document.querySelector("#entrada2");
+            const entrada3 = document.querySelector("#entrada3");
+
+            entrada1.addEventListener("keydown", pulsada1, false);
+            entrada2.addEventListener("keydown", pulsada2, false);
+            entrada3.addEventListener("keydown", pulsada3, false);
+
+            function pulsada1(event) {
+                var codigo = event.which || event.keyCode;
+
+                console.log("Presionada: " + codigo);
+
+                if (codigo === 13) {
+                    console.log("Tecla ENTER");
+                }
+
+                if (codigo >= 65 && codigo <= 90) {
+                    console.log(codigo + " ===> " + String.fromCharCode(codigo));
+                }
+            }
+
+            function pulsada2(event) {
+                const key = event.key; // "A", "1", "Enter", "ArrowRight"...
+                console.log("Presionada: " + key);
+            }
+
+            function pulsada3() {
+                const key = event.key;
+                if (event.keyCode < 45 || event.keyCode > 57) {
+                    console.log(event.keyCode);
+                    event.preventDefault();
+                    //if (event.keyCode < 97 || event.keyCode > 122) { // a - z
+                    //    event.preventDefault();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="entrada1" id="entrada1">
+    <br><br>
+    <hr><br>
+    <input type="text" name="entrada2" id="entrada2">
+    <br><br>
+    <hr><br>
+    <label for="entrada3">Solo números: </label>
+    <input type="text" name="entrada3" id="entrada3">
+</body>
+
+</html>
