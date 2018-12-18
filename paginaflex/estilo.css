@@ -50,12 +50,30 @@ main{
     justify-content: center;
 }
 article{
-    margin:0.5em;
+    width: 25%;
+    margin:1em;
     background-color: white;
     box-shadow: 4px 4px 2px grey;
     padding: 7px;
     flex-grow: 1;
+    text-align: justify;
 }
+
 article.img{
-    flex-grow: 2;
+    display:flex;
+    justify-content: center;
+    flex-grow: 5;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
+
+@media (max-width: 1300px) {
+    article{
+        width:35%;
+    }
+  }
+@media (max-width: 800px) {
+    article{
+        width:80%;
+    }
+  }
