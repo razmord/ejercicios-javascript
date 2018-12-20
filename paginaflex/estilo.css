@@ -15,6 +15,9 @@ header{
     background-size: cover;
     background-position: center;
 }
+header>img{
+    height: 100%;
+}
 nav{
     background-color: cornflowerblue;
     display: flex;
@@ -27,7 +30,9 @@ nav>div{
     color: white;
     text-align: center;
     font-weight: 700;
+    transition:  background-color 0.6s ease-out;
 }
+
 nav>div:nth-child(1){
     background-color: rgb(195, 216, 255);
 }
@@ -43,6 +48,9 @@ nav>div:nth-child(4){
 nav>div:nth-child(5){
     background-color: rgb(162, 195, 255);
 }
+nav>div:hover{
+    background-color: orangered;
+}
 main{
 
     display: flex;
@@ -50,7 +58,7 @@ main{
     justify-content: center;
 }
 article{
-    width: 25%;
+    flex-basis: 25%;
     margin:1em;
     background-color: white;
     box-shadow: 4px 4px 2px grey;
@@ -60,20 +68,21 @@ article{
 }
 
 article.img{
-    display:flex;
-    justify-content: center;
-    flex-grow: 5;
-    flex-wrap: wrap;
+    flex-grow: 3;
     overflow: hidden;
+    text-align: center;
+}
+.img>img{
+    display: inline-block;
 }
 
 @media (max-width: 1300px) {
     article{
-        width:35%;
+        flex-basis:35%;
     }
   }
 @media (max-width: 800px) {
     article{
-        width:80%;
+        flex-basis:80%;
     }
   }
