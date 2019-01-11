@@ -1,0 +1,38 @@
+html,body{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+	padding: 0;
+	margin: 0;
+	width:100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+#controls {
+	width: 80%;
+	height: 80px;
+	margin: 0 auto;
+	padding-right: 1px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+h1 {
+	font-style: italic;
+	font-weight: 100;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+#controls h1 {
+	display:inline-block;
+}
+
+#buttons {
+	display:inline-block;
+	float:right;
+	margin-top:20px;
+}
