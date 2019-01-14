@@ -50,7 +50,7 @@ h1 {
 	background-color: #BA7C67;
 	height: 100px;
 	margin: 0 auto;
-	width: 1000px;
+	min-width: 1000px;
 	display:table;
 	border-collapse: collapse; 
 }
@@ -86,6 +86,7 @@ h1 {
 .tier-buttons{
 	background-color: #A17161;
 	padding:3px;
+	width: 20px;
 }
 #personajes{
 	background-color: #2E3766;
