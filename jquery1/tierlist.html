@@ -10,21 +10,62 @@
 <link href="tierlist.css" rel="stylesheet">
 <body>
     <div id="controls">
-            <h1>TIER LIST MAKER - <span>ggrev</span></h1>
+            <h1>DANA'S TIER LIST MAKER- <span>REV2</span></h1>
             <div id="buttons">
+                <button id="game">Change game</button>
                 <button id="screenshot">Share</button>
                 <button id="hidebuttons">Hide controls</button>
-                <button id="game">Change game</button>
-                <button id="help">Help</button>
+                <button id="help-link">Help</button>
                 <button id="reset">Reset</button>
             </div>
         </div>
         <div id="tierlist">
+            <div id="tabla">
+                <div class="row">
+                    <div class="tier" contenteditable="true"><span class="label">S</span></div>
+                    <div class="tier-sort"></div>
+                    <div class="tier-buttons">
+                            <span class="ui-icon ui-icon-gear"></span>
+                            <span class="ui-icon ui-icon-triangle-1-n"></span>
+                            <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="tier" contenteditable="true"><span class="label">S</span></div>
+                        <div class="tier-sort"></div>
+                        <div class="tier-buttons">
+                            <span class="ui-icon ui-icon-gear"></span>
+                            <span class="ui-icon ui-icon-triangle-1-n"></span>
+                            <span class="ui-icon ui-icon-triangle-1-s"></span>
+                        </div>
+                </div>
+            </div>
         </div>
+        <div id="personajes">
+        </div>
+
+        <!-- ui-dialog -->
+    <div id="help-dialog" title="Help">
+            <p>This is a Tier List Maker made by Dana for the FGC ESP Discord</p>
+            <p>You can change the game you are using by clicking on "Change game" in the top bar.</p>
+            <p><strong>You can share editable versions of your tierlist.</strong> Click on the "Share" button and you will see a textbox that contains a code. Copy and share this with others so that they can edit your tierlist.</p>
+            <p>You can start over by pressing reset.</p>
+  </div>
 </body>
 <script src="external/jquery/jquery.js"></script>
 <script src="jquery-ui.js"></script>
 <script>
         $( "#buttons>button" ).button();
+
+        $( "#help-dialog" ).dialog({
+        autoOpen: false,
+        width: 600,
+    });
+
+        // Enlace para abrir el dialogo de ayuda
+        $( "#help-link" ).click(function( event ) {
+            $( "#help-dialog" ).dialog( "open" );
+            event.preventDefault();
+        });
 </script>
 </html>

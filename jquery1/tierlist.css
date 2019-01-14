@@ -9,15 +9,18 @@ html,body{
 body {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
+	background-color: #5060B2;
 }
 
 #controls {
+	
 	width: 80%;
 	height: 80px;
 	margin: 0 auto;
 	padding-right: 1px;
 	text-align: left;
 	vertical-align: middle;
+	color: #CBD0EA;
 }
 
 h1 {
@@ -29,10 +32,78 @@ h1 {
 
 #controls h1 {
 	display:inline-block;
+	
 }
 
 #buttons {
 	display:inline-block;
-	float:right;
+	float: right;
 	margin-top:20px;
+}
+
+#tierlist {
+	background-color: #677BE5;
+	height:600px;
+	padding-top:50px;
+}
+#tabla{
+	background-color: #BA7C67;
+	height: 100px;
+	margin: 0 auto;
+	width: 1000px;
+	display:table;
+	border-collapse: collapse; 
+}
+.row{
+	display:table-row;
+}
+.row>.tier,.row>.tier-sort,.row>.tier-buttons{
+	border: solid 5px  #A17161;
+	vertical-align: middle;
+	display: table-cell;
+}
+.tier{
+	min-width: 48px;
+    height: 64px;
+	transition: background .3s;
+}	
+.label{
+	min-width: 56px;
+    max-width: 128px;
+    line-height: 16px;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    margin: 0;
+    display: inline-block;
+    padding: 4px;
+}
+.tier-sort{
+	width: 960px;
+    min-height: 64px;
+    text-align: left;
+}
+.tier-buttons{
+	background-color: #A17161;
+	padding:3px;
+}
+#personajes{
+	background-color: #2E3766;
+	height:100vh;
+}
+
+@media (max-width: 1420px){
+	#controls{
+		text-align: center;
+		height: 117px;
+	}
+	#controls > h1{
+		display: block;
+		text-align: center;
+	}
+	#buttons {
+		display:inline-block;
+		float: none;
+		margin-top: 0;
+	}
 }
