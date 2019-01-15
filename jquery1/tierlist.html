@@ -10,10 +10,10 @@
 <link href="tierlist.css" rel="stylesheet">
 <body>
     <div id="controls">
-            <h1>DANA'S TIER LIST MAKER- <span>REV2</span></h1>
+            <h1>DANA'S TIER LIST MAKER TOOLKIT</h1>
             <div id="buttons">
-                <button id="game">Change game</button>
-                <button id="screenshot">Share</button>
+                <!--<button id="game">Change game</button>-->
+                <button id="screenshot">Save</button>
                 <button id="hidebuttons">Hide controls</button>
                 <button id="help-link">Help</button>
                 <button id="reset">Reset</button>
@@ -87,13 +87,39 @@
             </div>
         </div>
         <div id="personajes">
+                <div></div>
+                <div class="character c1"></div>
+                <div class="character c2"></div>
+                <div class="character c3"></div>
+                <div class="character c4"></div>
+                <div class="character c5"></div>
+                <div class="character c6"></div>
+                <div class="character c7"></div>
+                <div class="character c8"></div>
+                <div class="character c9"></div>
+                <div class="character c10"></div>
+                <div class="character c11"></div>
+                <div class="character c12"></div>
+                <div class="character c13"></div>
+                <div class="character c14"></div>
+                <div class="character c15"></div>
+                <div class="character c16"></div>
+                <div class="character c17"></div>
+                <div class="character c18"></div>
+                <div class="character c19"></div>
+                <div class="character c20"></div>
+                <div class="character c21"></div>
+                <div class="character c22"></div>
+                <div class="character c23"></div>
+                <div class="character c24"></div>
+                <div class="character c25"></div>
         </div>
 
         <!-- ui-dialog -->
     <div id="help-dialog" title="Help">
             <p>This is a Tier List Maker made by Dana for the FGC ESP Discord</p>
             <p>You can change the game you are using by clicking on "Change game" in the top bar.</p>
-            <p><strong>You can share editable versions of your tierlist.</strong> Click on the "Share" button and you will see a textbox that contains a code. Copy and share this with others so that they can edit your tierlist.</p>
+            <p><strong>You can save and share editable versions of your tierlist.</strong> Click on the "Save" button and you will see a textbox that contains a code. Copy and share this with others so that they can edit your tierlist.</p>
             <p>You can start over by pressing reset.</p>
   </div>
 </body>
@@ -111,6 +137,19 @@
         $( "#help-link" ).click(function( event ) {
             $( "#help-dialog" ).dialog( "open" );
             event.preventDefault();
+        });
+
+        //Permite mover los personajes
+        $( ".character" ).draggable({
+            connectToSortable: ".tier-sort",
+            revert: "invalid",
+            stack: ".character"
+        });
+        //Estas dos funciones permiten meter los personajes en la tabla y ordenalos en la celda
+        $( ".tier-sort" ).droppable({
+            accept:".character",
+        });
+        $( ".tier-sort" ).sortable({
         });
 </script>
 </html>

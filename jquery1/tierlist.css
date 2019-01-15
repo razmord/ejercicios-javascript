@@ -4,6 +4,7 @@ html,body{
 	padding: 0;
 	margin: 0;
 	width:100%;
+	height:100%;
 }
 
 body {
@@ -64,7 +65,7 @@ h1 {
 }
 .tier{
 	min-width: 48px;
-    height: 64px;
+    height: 66px;
 	transition: background .3s;
 }	
 .label{
@@ -79,8 +80,8 @@ h1 {
     padding: 4px;
 }
 .tier-sort{
-	width: 960px;
-    min-height: 64px;
+	width: 990px;
+    min-height: 66px;
     text-align: left;
 }
 .tier-buttons{
@@ -89,8 +90,93 @@ h1 {
 	width: 20px;
 }
 #personajes{
-	background-color: #2E3766;
-	height:100vh;
+	width: 768px;
+    margin: 10px auto;
+    line-height: 0px;
+}
+.character {
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+    background-position: center;
+	background-size: cover;
+	border: solid 1px black;
+	vertical-align: top;
+}
+.c1{
+	background-image: url("imagenes/Ab-s.gif");
+}
+.c2{
+	background-image: url("imagenes/An-s.gif");
+}
+.c3{
+	background-image: url("imagenes/Ax-s.gif");
+}
+.c4{
+	background-image: url("imagenes/Ba-s.gif");
+}
+.c5{
+	background-image: url("imagenes/Br-s.gif");
+}
+.c6{
+	background-image: url("imagenes/Ch-s.gif");
+}
+.c7{
+	background-image: url("imagenes/Di-s.gif");
+}
+.c8{
+	background-image: url("imagenes/Ed-s.gif");
+}
+.c9{
+	background-image: url("imagenes/Fa-s.gif");
+}
+.c10{
+	background-image: url("imagenes/In-s.gif");
+}
+.c11{
+	background-image: url("imagenes/Ja-s.gif");
+}
+.c12{
+	background-image: url("imagenes/Jo-s.gif");
+}
+.c13{
+	background-image: url("imagenes/Ju-s.gif");
+}
+.c14{
+	background-image: url("imagenes/Kl-s.gif");
+}
+.c15{
+	background-image: url("imagenes/Ky-s.gif");
+}
+.c16{
+	background-image: url("imagenes/Ma-s.gif");
+}
+.c17{
+	background-image: url("imagenes/Mi-s.gif");
+}
+.c18{
+	background-image: url("imagenes/Os-s.gif");
+}
+.c19{
+	background-image: url("imagenes/Po-s.gif");
+}
+.c20{
+	background-image: url("imagenes/Ro-s.gif");
+}
+.c21{
+	background-image: url("imagenes/Sl-s.gif");
+}
+.c22{
+	background-image: url("imagenes/So-s.gif");
+}
+.c23{
+	background-image: url("imagenes/Te-s.gif");
+}
+.c24{
+	background-image: url("imagenes/Ve-s.gif");
+}
+.c25{
+	background-image: url("imagenes/Za-s.gif");
 }
 
 @media (max-width: 1420px){
