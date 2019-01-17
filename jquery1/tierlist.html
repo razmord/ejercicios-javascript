@@ -126,8 +126,11 @@
 <script src="external/jquery/jquery.js"></script>
 <script src="jquery-ui.js"></script>
 <script>
+
+        //Da a los botones los estilos de jquery
         $( "#buttons>button" ).button();
 
+        //Defina la ventana del dialogo de ayuda
         $( "#help-dialog" ).dialog({
         autoOpen: false,
         width: 600,
@@ -141,15 +144,37 @@
 
         //Permite mover los personajes
         $( ".character" ).draggable({
-            connectToSortable: ".tier-sort",
-            revert: "invalid",
-            stack: ".character"
+          connectToSortable: ".tier-sort",
+           revert: "invalid",
+            start: function( event, ui ) {
+                $(this).css('opacity',.5);
+                $(this).addClass("to-delete");
+            },
+            stop: function( event, ui ) {
+                $(this).css('opacity',1);
+            },
+            stack: ".character", //Maneja el z-index de los elementos personaje automaticamente
+         helper:"clone" //Esta caracteristica es necesaria para evitar errores con connectToSortable, clona el elemento arrastrado
         });
         //Estas dos funciones permiten meter los personajes en la tabla y ordenalos en la celda
         $( ".tier-sort" ).droppable({
             accept:".character",
         });
         $( ".tier-sort" ).sortable({
+            connectWith: "#personajes, .tier-sort",
+            //Debido a la necesidad de usar helper clone, necesitamos esta función para evitar la duplicacion de elementos
+            receive: function (event, ui) { 
+                if(ui.item.hasClass("to-delete")){
+                    ui.item.remove(); // elimina el objeto original
+                }
+                   
+            }
+        });
+        $( "#personajes" ).droppable({
+            accept:".character",
+        });
+        $( "#personajes" ).sortable({
+            connectWith: ".tier-sort",
         });
 </script>
 </html>
