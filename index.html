@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .cubo, .cubo .cara {
+        width: 200px;
+        height: 200px;
+    }
+    .cubo .cara {
+        position: absolute;
+    }
+    .cubo {
+        margin: 100px auto;
+    }
+    .cubo {
+        transform-style: preserve-3d;
+        transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
+    }
+    .cubo .cara#superior {
+    background-color: rgb(126, 248, 208);
+    transform: rotateX(90deg) translateZ(100px);
+    }
+    .cubo .cara#frente {
+        background-color: rgb(128, 223, 203);
+        transform: translateZ(100px);
+    }
+    .cubo .cara#atras {
+        background-color: rgb(97, 204, 97);
+        transform: translateZ(-100px);
+    }
+    .cubo .cara#derecha {
+        background-color: rgb(197, 121, 168);
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .cubo .cara#izquierda {
+        background-color: rgb(182, 182, 102);
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+    .cubo .cara#inferior {
+        background-color: rgb(116, 215, 228);
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+    .cubo {
+        animation: rotate 6s infinite linear;
+    }
+    @keyframes rotate {
+        0% { transform: rotateX(   0deg ) rotateY(   0deg ); }
+        100% { transform: rotateX( 360deg ) rotateY( 360deg ); }
+    }
+    </style>
+</head>
+<body>
+    <div class="cubo">
+        <div class="cara" id="superior"></div>
+        <div class="cara" id="frente"></div>
+        <div class="cara" id="derecha"></div>
+        <div class="cara" id="izquierda"></div>
+        <div class="cara" id="atras"></div>
+        <div class="cara" id="inferior"></div>
+    </div>
+</body>
+</html>

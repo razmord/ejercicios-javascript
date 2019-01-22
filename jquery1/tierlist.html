@@ -144,13 +144,13 @@
 
         //Permite mover los personajes
         $( ".character" ).draggable({
-          connectToSortable: ".tier-sort",
+          connectToSortable: ".tier-sort", //Permite conectar los personajes a las filas de la tabla
            revert: "invalid",
-            start: function( event, ui ) {
-                $(this).css('opacity',.5);
-                $(this).addClass("to-delete");
+            start: function( event, ui ) {//Esta función se lleva a cabo al comenzar a arrastrarse el elemento
+                $(this).css('opacity',.5); //Hace el original semitransparente
+                $(this).addClass("to-delete"); //Marca el original para borrar
             },
-            stop: function( event, ui ) {
+            stop: function( event, ui ) {//Cuando se termina de arrastar el elemento, devuelve la opacidad original, solo importa si no se suelta en una fila
                 $(this).css('opacity',1);
             },
             stack: ".character", //Maneja el z-index de los elementos personaje automaticamente
@@ -170,6 +170,7 @@
                    
             }
         });
+    //Estas dos funciones permiten meter los personajes en el hueco inicial y ordenalos en la celda
         $( "#personajes" ).droppable({
             accept:".character",
         });
