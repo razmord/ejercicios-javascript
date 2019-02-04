@@ -1,3 +1,74 @@
+@font-face {
+  font-family: 'itc_stone_serifsemibold';
+  src: url('FONTS/stone_serif_semibold-webfont.woff2') format('woff2'),
+       url('FONTS/stone_serif_semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'itc_stone_serifbold';
+  src: url('FONTS/yu-gi-oh_itc_stone_serif_small_caps_bold-webfont.woff2') format('woff2'),
+       url('FONTS/yu-gi-oh_itc_stone_serif_small_caps_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'matrixbookmedium';
+  src: url('FONTS/yu-gi-oh_matrix_book-webfont.woff2') format('woff2'),
+       url('FONTS/yu-gi-oh_matrix_book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'matrixregularsmallcapsregular';
+  src: url('FONTS/yu-gi-oh_matrix_regular_small_caps_2-webfont.woff2') format('woff2'),
+       url('FONTS/yu-gi-oh_matrix_regular_small_caps_2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  background:  rgba(224, 194, 199, 0.63); 
+  font-family: Arial, Helvetica, sans-serif;
+}
+header{
+  border-bottom: 4px solid rebeccapurple;
+}
+header>h1{
+  padding:20px;
+  padding-bottom: 0px;
+  color: rebeccapurple;
+}
+div.container{
+  background:  rgba(255, 216, 223, 0.644);
+  width: 24cm;
+  height: 16cm;
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 0.5cm;
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+}
+
+div.container>div{
+  background:  rgba(255, 216, 223, 0.644);
+  width: 9cm;
+  height: 14cm;
+  display: block;
+  margin: 20px;
+  margin-bottom: 0.5cm;
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+  }
+div#derecha{
+  float:right;
+}
+div#izquierda{
+  border:none;
+  }
 
 .card {
 	display: grid;
@@ -24,9 +95,12 @@
 		padding: 9px;
 }
 .name{
-    font-variant: small-caps;
-    padding: 6px;
-    font-size: 18px;
+    font-family: 'matrixregularsmallcapsregular';
+    padding-left: 3px;
+    padding-right: 2px;
+    padding-bottom:9px;
+    font-size: 33px;
+    font-weight: 500;
     grid-area: title;
     grid-column: span 25;
 	grid-row: span 3;
@@ -35,9 +109,28 @@
     border-right: 3px solid rgba(0,0,0,.5);
     border-bottom: 3px solid rgba(0,0,0,.5);
 }
-.level{
+#symbol {
+  
+  font-size: 10px;
+  float: right;
+}
+#symbol img {
+  width: 27px;
+  margin-top: 1px;
+}
+.lrt{
+  font-family: 'itc_stone_serifbold';
 	grid-column: 3 / span 21;
-	grid-row: 4;
+  grid-row: 4;
+  text-align: right;
+}
+.stars {
+  font-size: 10px;
+}
+.stars img {
+  width: 20px;
+  margin-top: 5px;
+  margin-left:2px;
 }
 .pic{
     grid-column: 4 / span 19;
@@ -48,37 +141,35 @@
     background-position: center;
 	background-size: cover;
   }
-  #symbol {
-    font-size: 10px;
-    float: right;
-  }
-  #symbol img {
-    width: 28px;
-    margin-top: -5px;
-  }
   .description {
     grid-column: 2 / span 23;
-	grid-row: 15/span 5;
+  grid-row: 15/span 5;
+  display: flex;
+  flex-direction: column;
     background: rgba(253, 253, 251, 0.596);
     padding: 6px;
     border: 4px solid #B34930;
     font-size: 12px;
   }
   .description h2 {
-    font-size: 16px;
+    font-family: 'itc_stone_serifbold';
+    font-size: 14px;
     font-variant: small-caps;
     margin: 0;
     font-style: normal;  
   }
  .description p {
-    font-style: italic;
-    font-size: 12px;
+    font-family: 'matrixbookmedium';
+    font-size: 14px;
     margin: 0;
   }
   
-  
   #stats {
-    margin-top: 32px;
+    margin-top: auto;
     border-top: 2px solid #000;
     text-align: right;
+  }
+  .baraja{
+    float:right;
+    margin-right: 100px;
   }
