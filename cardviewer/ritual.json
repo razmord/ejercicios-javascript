@@ -1,0 +1,50 @@
+[
+  {
+    "id":1,
+    "name":"Ritual Beast Tamer Lara",
+    "type":"Psychic",
+    "element":"WIND",
+    "effect":"If this card is Normal Summoned: You can target 1 Ritual Beast monster in your Graveyard; Special Summon it. You can only Special Summon Ritual Beast Tamer Lara(s) once per turn.",
+    "kind":"effect",
+    "lrt":"*",
+    "ATK":"100",
+    "DEF":"2000",
+    "img":"IMG/RitualBeastTamerLara.PNG"
+  },
+  {
+    "id":2,
+    "name":"Ritual Beast Tamer Elder",
+    "type":"Psychic",
+    "element":"WIND",
+    "effect":"After you Normal Summon this card, you can Normal Summon 1 Ritual Beast monster during your Main Phase this turn, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) You can only Special Summon Ritual Beast Tamer Elder(s) once per turn.",
+    "kind":"effect",
+    "lrt":"**",
+    "ATK":"200",
+    "DEF":"1000",
+    "img":"IMG/RitualBeastTamerElder.PNG"
+  },
+  {
+    "id":3,
+    "name":"Spiritual Beast Cannahawk ",
+    "type":"Thunder",
+    "element":"WIND",
+    "effect":"Once per turn: You can banish 1 Ritual Beast card from your Deck, face-up. During your second Standby Phase after this effect's activation, add the card banished by this effect to your hand. You can only Special Summon Spiritual Beast Cannahawk(s) once per turn.",
+    "kind":"effect",
+    "lrt":"****",
+    "ATK":"1400",
+    "DEF":"600",
+    "img":"IMG/SpiritualBeastCannahawk.PNG"
+  },
+  {
+    "id":4,
+    "name":"Ritual Beast Ulti-Gaiapelio    ",
+    "type":"Psychic",
+    "element":"LIGHT",
+    "effect":"1 Ritual Beast Ulti- monster + 1 Ritual Beast Tamer monster + 1 Spiritual Beast monster</br>  Must be Special Summoned (from your Extra Deck) by banishing the above cards you control, and cannot be Special Summoned by other ways. (You do not use Polymerization.) If Summoned this way, this card gains this effect.</br> ● During either player's turn, when a Spell/Trap Card, or monster effect, is activated: You can banish 1 Ritual Beast card from your hand; negate the activation, and if you do, destroy it.",
+    "kind":"fusion",
+    "lrt":"**********",
+    "ATK":"3200",
+    "DEF":"2100",
+    "img":"IMG/RitualBeastUltiGaiapelio.PNG"
+  }
+]

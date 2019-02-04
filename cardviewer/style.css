@@ -1,3 +1,4 @@
+/*Fuentes personalizadas de las cartas*/
 @font-face {
   font-family: 'itc_stone_serifsemibold';
   src: url('FONTS/stone_serif_semibold-webfont.woff2') format('woff2'),
@@ -30,6 +31,7 @@
   font-style: normal;
 
 }
+/*Layout simple con un header, y un contenedor con dos divs para la carta y los datos*/
 body {
   background:  rgba(224, 194, 199, 0.63); 
   font-family: Arial, Helvetica, sans-serif;
@@ -69,37 +71,30 @@ div#derecha{
 div#izquierda{
   border:none;
   }
-
-.card {
+/*Div de la carta que contiene el grid, que establece el fondo y el borde de la carta*/
+#card {
 	display: grid;
     border: 15px solid #363944;
     border-radius: 20px;
     width: 300px;
     height: 480px;
-    background: #BF8737;
-    background-:#7b64b2;
-    background:#d7dbe4;
-    background:#4278a7;
-    background: #25282f;
-    background: #0077bb;
-    background:#bf9b4d;
-    background-: #248e8c;
-    background-: #a54584;
+    background: #767683;
 	cursor: default;
 }
-
+/*Div donde se establece la grid con la que se ha realizado la carta*/
 .card_grid{
 		display: grid;
 		grid-template-columns: 1fr repeat(23, 12px) 1fr;
 		grid-template-rows: 3px 30px 3px 30px 3px repeat(8,30px) 15px repeat(5,26px);
 		padding: 9px;
 }
-.name{
+/*Div de la caja del nombre, con un borde hecho para parecerse lo maximo al diseño original*/
+#name{
     font-family: 'matrixregularsmallcapsregular';
     padding-left: 3px;
     padding-right: 2px;
     padding-bottom:9px;
-    font-size: 33px;
+    font-size: 28px;
     font-weight: 500;
     grid-area: title;
     grid-column: span 25;
@@ -109,6 +104,7 @@ div#izquierda{
     border-right: 3px solid rgba(0,0,0,.5);
     border-bottom: 3px solid rgba(0,0,0,.5);
 }
+/*Div que contiene el simbolo de elemento de la carta, establece la posicion y tamaño de la imagen*/
 #symbol {
   
   font-size: 10px;
@@ -118,12 +114,14 @@ div#izquierda{
   width: 27px;
   margin-top: 1px;
 }
-.lrt{
+/*Div que contiene el nivel o el tipo de carta si no es un monstruo*/
+#lrt{
   font-family: 'itc_stone_serifbold';
 	grid-column: 3 / span 21;
   grid-row: 4;
   text-align: right;
 }
+/*Div donde se contienen las estrellas de nivel y se establece su colocacción*/
 .stars {
   font-size: 10px;
 }
@@ -132,16 +130,17 @@ div#izquierda{
   margin-top: 5px;
   margin-left:2px;
 }
-.pic{
+/*Div donde se muestra la imagen de la carta, mediante un background-image. Tambien se define el borde.*/
+#pic{
     grid-column: 4 / span 19;
 	grid-row: 6/span 8;
     border: 8px solid #545F7C;
     box-shadow: 4px 4px 4px rgba(0,0,0,.5);
-    background-image: url("http://i63.tinypic.com/2ibnsz4.jpg");
     background-position: center;
 	background-size: cover;
   }
-  .description {
+  /*Div donde esta la descripcion y el efecto de la carta*/
+  #description {
     grid-column: 2 / span 23;
   grid-row: 15/span 5;
   display: flex;
@@ -151,25 +150,23 @@ div#izquierda{
     border: 4px solid #B34930;
     font-size: 12px;
   }
-  .description h2 {
+  /*H2 se usa para indicar el tipo de monstruo entre corchetes*/
+ #description h2 {
     font-family: 'itc_stone_serifbold';
     font-size: 14px;
     font-variant: small-caps;
     margin: 0;
     font-style: normal;  
   }
- .description p {
+  /*Texto de la carta*/
+ #description p {
     font-family: 'matrixbookmedium';
-    font-size: 14px;
+    font-size: 7px;
     margin: 0;
   }
-  
+  /*Estilos del ATK y DEF, si los hubiese*/
   #stats {
     margin-top: auto;
     border-top: 2px solid #000;
     text-align: right;
-  }
-  .baraja{
-    float:right;
-    margin-right: 100px;
   }
