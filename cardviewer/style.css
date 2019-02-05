@@ -85,11 +85,12 @@ div#izquierda{
 .card_grid{
 		display: grid;
 		grid-template-columns: 1fr repeat(23, 12px) 1fr;
-		grid-template-rows: 3px 30px 3px 30px 3px repeat(8,30px) 15px repeat(5,26px);
-		padding: 9px;
+		grid-template-rows: 3px 30px 3px 30px 3px repeat(8,30px) 15px repeat(5,26px) 1fr 4px;
+
 }
 /*Div de la caja del nombre, con un borde hecho para parecerse lo maximo al diseño original*/
 #name{
+  background: rgba(253, 253, 251, 0.103);
     font-family: 'matrixregularsmallcapsregular';
     padding-left: 3px;
     padding-right: 2px;
@@ -97,8 +98,8 @@ div#izquierda{
     font-size: 28px;
     font-weight: 500;
     grid-area: title;
-    grid-column: span 25;
-	grid-row: span 3;
+    grid-column: 1/ span 25;
+	  grid-row: 1/ span 3;
     border-top: 3px solid rgba(255,255,255,.7);
     border-left: 3px solid rgba(255,255,255,.7);
     border-right: 3px solid rgba(0,0,0,.5);
@@ -118,7 +119,7 @@ div#izquierda{
 #lrt{
   font-family: 'itc_stone_serifbold';
 	grid-column: 3 / span 21;
-  grid-row: 4;
+  grid-row: 14;
   text-align: right;
 }
 /*Div donde se contienen las estrellas de nivel y se establece su colocacción*/
@@ -126,23 +127,23 @@ div#izquierda{
   font-size: 10px;
 }
 .stars img {
-  width: 20px;
-  margin-top: 5px;
+  width: 15px;
+  margin-bottom:5px;
   margin-left:2px;
 }
 /*Div donde se muestra la imagen de la carta, mediante un background-image. Tambien se define el borde.*/
 #pic{
-    grid-column: 4 / span 19;
-	grid-row: 6/span 8;
-    border: 8px solid #545F7C;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.5);
+    grid-column:1 / span 26;
+	grid-row: 4/span 21;
+    border: 1px solid #545F7C;
+    box-shadow: 0px 2px 2px rgba(0,0,0,.5);
     background-position: center;
 	background-size: cover;
   }
   /*Div donde esta la descripcion y el efecto de la carta*/
   #description {
     grid-column: 2 / span 23;
-  grid-row: 15/span 5;
+  grid-row: 15/span 6;
   display: flex;
   flex-direction: column;
     background: rgba(253, 253, 251, 0.596);
@@ -160,8 +161,9 @@ div#izquierda{
   }
   /*Texto de la carta*/
  #description p {
+   text-align: justify;
     font-family: 'matrixbookmedium';
-    font-size: 7px;
+    font-size: 8px;
     margin: 0;
   }
   /*Estilos del ATK y DEF, si los hubiese*/
