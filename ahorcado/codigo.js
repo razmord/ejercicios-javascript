@@ -6,9 +6,11 @@ var c=document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var palabra=document.createElement("p");
 var letras=document.createElement("p");
+var ganar=document.createElement("p");
 var solucion;
 letrero.appendChild(palabra);
 letrero.appendChild(letras);
+letrero.appendChild(ganar);
 aplicar.addEventListener('click', aplica, false);
 reiniciar.addEventListener('click', reinicia, false);
 reinicia();
@@ -17,11 +19,32 @@ function aplica(){
     texto.value='';
     letra.toUpperCase();
     if(solucion.includes(letra)){
-
+       var output = palabra.innerText;
+       for (var i =0; i<solucion.length;i++) {
+        console.log(solucion[i]+"-"+letra);
+        console.log(solucion[i].toString().localeCompare(letra.toString()))
+        if(!solucion[i].toString().localeCompare(letra.toString())){
+            output=output.replaceAt(i*2,letra);
+        }
+        console.log(output);
+        palabra.innerText = output;
+    }
     }else if(!letras.innerText.includes(letra)){
+        
         letras.appendChild(document.createTextNode(letra+' '));
         dibuja();
     }
+    if(!palabra.innerText.includes("_")){
+        ganar=document.createElement("p");
+        ganar.appendChild(document.createTextNode("¡Has ganado!"));
+        letrero.appendChild(ganar);
+    }
+    if(vida>=7){
+        ganar=document.createElement("p");
+        ganar.appendChild(document.createTextNode("¡Has perdido!"));
+        letrero.appendChild(ganar);
+    }
+
 }
 function reinicia(){
     var xhr = new XMLHttpRequest();
@@ -34,6 +57,7 @@ function reinicia(){
             console.log("Datos obtenidos despues del PARSE:..." + respuesta);
             letrero.removeChild(palabra);
             letrero.removeChild(letras);
+            letrero.removeChild(ganar);
             palabra=document.createElement("p"); 
             letras=document.createElement("p"); 
             var n=Math.floor(Math.random()*10);
@@ -117,4 +141,8 @@ function dibuja(){
     break;
     }
     vida++;
+}
+
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
 }
